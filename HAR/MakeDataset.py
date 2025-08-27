@@ -20,7 +20,8 @@ offset = 100
 folders = ["LAYING","SITTING","STANDING","WALKING","WALKING_DOWNSTAIRS","WALKING_UPSTAIRS"]
 classes = {"WALKING":1,"WALKING_UPSTAIRS":2,"WALKING_DOWNSTAIRS":3,"SITTING":4,"STANDING":5,"LAYING":6}
 
-combined_dir = os.path.join("Combined")
+workspace_root = os.path.dirname(os.path.dirname(__file__))
+combined_dir = os.path.join(workspace_root, "Datasets", "Combined")
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                                                 # Train Dataset
@@ -78,8 +79,9 @@ y = np.concatenate((y_train,y_test))
 seed = 4
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,random_state=seed,stratify=y)
 
-print("Training data shape: ",X_train.shape)
-print("Testing data shape: ",X_test.shape)
+if __name__ == '__main__':
+    print("Training data shape: ",X_train.shape)
+    print("Testing data shape: ",X_test.shape)
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
