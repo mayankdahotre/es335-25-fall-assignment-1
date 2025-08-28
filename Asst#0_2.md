@@ -70,7 +70,7 @@ Running our decision tree implementation on the dataset yields the following per
 
 ## Part 2: 5-Fold Nested Cross-Validation
 
-To find the optimal depth and ensure robust performance evaluation, we implemented 5-fold nested cross-validation with depth values ranging from 1 to 8.
+To find the optimal depth and ensure robust performance evaluation, we implemented 5-fold nested cross-validation with depth values ranging from 1 to 10.
 
 ### Cross-Validation Results
 ```
